@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var transporter = nodemailer.createTransport({
-  service: 'Gmail',
+  service: 'AOL',
   auth: {
-    user: 'nicholashrboka@gmail.com',
+    user: 'nhrboka@aol.com',
     pass: PASSWORD
   }
 });
