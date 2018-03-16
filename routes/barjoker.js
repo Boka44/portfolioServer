@@ -50,7 +50,6 @@ app.post('/', function (req, res) {
 	// 				<p><strong>Boka</strong></p>`;
 
 	
-s
   // const from = name && email ? `${name} <${email}>` : `${name || email}`
   let mailOptions = {
     from: 'nhrboka@aol.com',
