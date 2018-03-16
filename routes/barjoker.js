@@ -30,7 +30,7 @@ app.post('/', function (req, res) {
   // const from = name && email ? `${name} <${email}>` : `${name || email}`
   let mailOptions = {
     from: 'nhrboka@aol.com',
-    to: `${email}`,
+    to: email,
     subject: `Welcome to Barjoker!`,
     text
   };
