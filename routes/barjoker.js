@@ -56,8 +56,8 @@ app.post('/', function (req, res) {
     from: 'nhrboka@aol.com',
     to: `${email}`,
     subject: `Welcome to Barjoker!`,
-    text,
-    html
+    text: text,
+    html: html
   };
 
  transporter.sendMail(mailOptions, function(error, info){
