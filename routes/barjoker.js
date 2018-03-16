@@ -24,6 +24,7 @@ app.post('/', function (req, res) {
     req.headers['Access-Control-Allow-Origin'] = '*'
 	let email = req.body.email;
 	let name = req.body.name;
+	let text = `Hello ${name},\n\n Welcome to Barjoker!`;
 	
 
   const from = name && email ? `${name} <${email}>` : `${name || email}`
@@ -31,16 +32,16 @@ app.post('/', function (req, res) {
     from: 'nhrboka@aol.com',
     to: `${email}`,
     subject: `Welcome to Barjoker!`,
-    text: `Hello ${name},\n\n Welcome to Barjoker!`
+    text
   };
 
  transporter.sendMail(mailOptions, function(error, info){
     if(error){
         console.log(error);
-        res.json({yo: 'error'});
+        res.json({message: error});
     }else{
         console.log('Message sent: ' + info.response);
-        res.json({yo: info.response});
+        res.json({message: info.response});
     };
   });
 
